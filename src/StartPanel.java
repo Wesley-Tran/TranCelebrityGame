@@ -219,7 +219,7 @@ public class StartPanel extends JPanel implements ActionListener {
     boolean validAnswer = false;
     validClue = controller.validateClue(clueText, "");
 
-    if (answerText.length() > 4) {
+    if (answerText.length() >= 4) {
       validAnswer = controller.validateCelebrity(answerText);
     }
 

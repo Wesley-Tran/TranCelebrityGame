@@ -60,6 +60,7 @@ public class CelebrityGame {
 		if (celebGameList != null && celebGameList.size() > 0) {
 			gameCelebrity = celebGameList.get(0);
 			gameWindow.replaceScreen("GAME");
+
 		}
 	}
 
