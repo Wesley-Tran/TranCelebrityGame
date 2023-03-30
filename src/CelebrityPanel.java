@@ -150,21 +150,21 @@ public class CelebrityPanel extends JPanel implements ActionListener {
   }
 
   public void resetGame() {
-    guessLabel = new JLabel("Guess:");
-    staticTimerLabel = new JLabel("Time remaining: ");
-    guessButton = new JButton("Submit guess");
-    resetButton = new JButton("Start again");
-    clueArea = new JTextArea("", 30, 20);
-    cluePane = new JScrollPane(clueArea);
-    guessField = new JTextField("Enter guess here", 30);
-    success = "You guessed correctly!!! \nNext Celebrity clue is: ";
-    tryAgain = "You have chosen poorly, try again!\nThe clue is: ";
+    guessLabel.setText("Guess:");
+    staticTimerLabel.setText("Time remaining: ");
+    guessButton.setText("Submit guess");
+    resetButton.setText("Start again");
+    clueArea.setText("");
+    guessField.setText("Enter guess here");
     seconds = 30; //changed from 60 to test
-    countdownTimer = new Timer(1000, null);
+    guessButton.setEnabled(true);
+    guessField.setEnabled(true);
+    clueArea.setBackground(Color.WHITE);
+
 
     setupPanel();
     setupLayout();
-    setupListeners();
+
   }
 
   /**
@@ -212,7 +212,7 @@ public class CelebrityPanel extends JPanel implements ActionListener {
         controller.resetStart();
         countdownTimer.restart();
       }
-    } else if (source instanceof Timer timer) {
+    } else if (source instanceof Timer) {
       timerFires();
     }
   }

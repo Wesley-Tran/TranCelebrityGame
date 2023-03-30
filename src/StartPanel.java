@@ -142,21 +142,18 @@ public class StartPanel extends JPanel implements ActionListener {
   }
 
   public void resetPanel() {
-    removeAll();
     celebrityClue = "Enter the clue for the celebrity";
-    clueLabel = new JLabel(celebrityClue);
+    clueLabel.setText(celebrityClue);
 
-    answerField = new JTextField("Type celebrity here (4 letters min)");
-    clueField = new JTextField("Enter celebrity clue here (10 letters min)");
-    addCelebrityButton = new JButton("Add current celebrity");
-    startButton = new JButton("Start Celebrity game");
+    answerField.setText("Type celebrity here (4 letters min)");
+    clueField.setText("Enter celebrity clue here (10 letters min)");
     celebrityCount = 0;
     countLabelText = "Current Celebrity Count: " + celebrityCount;
-    celebrityCountLabel = new JLabel(countLabelText);
+    celebrityCountLabel.setText(countLabelText);
 
     setupPanel();
     setupLayout();
-    setupListeners();
+
   }
 
   /**
