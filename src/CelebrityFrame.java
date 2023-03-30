@@ -87,8 +87,12 @@ public class CelebrityFrame extends JFrame {
 
 	}
 
-	public void reset() {
+	public void resetStart() {
 		replaceScreen("START");
 		startPanel.resetPanel();
+	}
+	public void resetGame() {
+		replaceScreen("GAME");
+		gamePanel.resetGame();
 	}
 }
