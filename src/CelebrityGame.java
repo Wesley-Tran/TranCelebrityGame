@@ -67,9 +67,9 @@ public class CelebrityGame {
 	 * To be called when restarting the game by pressing resetButton
 	 */
 	public void reset() {
+		celebGameList.clear();
 		gameWindow.reset();
-//		gameWindow.replaceScreen("START");
-//		celebGameList.clear();
+
 	}
 
 	/**

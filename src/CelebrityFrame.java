@@ -88,6 +88,7 @@ public class CelebrityFrame extends JFrame {
 	}
 
 	public void reset() {
-		setVisible(false);
+		replaceScreen("START");
+		startPanel.resetPanel();
 	}
 }
