@@ -140,7 +140,14 @@ public class StartPanel extends JPanel implements ActionListener {
     typeGroup.add(celebrityRadio);
 
   }
-  
+
+  public void resetPanel() {
+    removeAll();
+    setupPanel();
+    revalidate();
+    repaint();
+  }
+
   /**
    * Uses the Springlayout constraint system to place all GUI components on
    * screen. All constraints grouped together to keep code clean and

@@ -60,8 +60,16 @@ public class CelebrityGame {
 		if (celebGameList != null && celebGameList.size() > 0) {
 			gameCelebrity = celebGameList.get(0);
 			gameWindow.replaceScreen("GAME");
-
 		}
+	}
+
+	/**
+	 * To be called when restarting the game by pressing resetButton
+	 */
+	public void reset() {
+		gameWindow.reset();
+//		gameWindow.replaceScreen("START");
+//		celebGameList.clear();
 	}
 
 	/**
